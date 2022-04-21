@@ -319,7 +319,7 @@ class Epics(GitlabChildStream):
 # TODO: We need to upgrade the plan for these feature (epics) to be available
 class EpicIssues(GitlabChildStream):
     primary_key = "epic_issue_id"
-    path_list = ["group_id", "id"]
+    path_list = ["group_id", "iid"]
     flatten_id_keys = ["milestone", "assignee", "author"]
     flatten_list_keys = ["assignees"]
-    path_template = "groups/{group_id}/epics/{id}/issues"
+    path_template = "groups/{group_id}/epics/{iid}/issues"
